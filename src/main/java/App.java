@@ -23,8 +23,12 @@ get("/success", (request, response) -> {
   ArrayList<Card> fullDeck = testDeck.getCards();
   Card oneCard = fullDeck.get(0);
   Card twoCard = fullDeck.get(1);
+  int oneCardValue = Arrays.asList(Deck.VALUES).indexOf(oneCard.getValue());
+  int twoCardValue = Arrays.asList(Deck.VALUES).indexOf(twoCard.getValue());
   String playerOneCard = oneCard.name();
   String playerTwoCard = twoCard.name();
+  model.put("oneCardValue", oneCardValue);
+  model.put("twoCardValue", twoCardValue);
   model.put("playerOneCard", playerOneCard);
   model.put("playerTwoCard", playerTwoCard);
   model.put("template", "templates/success.vtl");
