@@ -12,7 +12,19 @@ public class AppTest extends FluentTest {
       return webDriver;
   }
 
-  // @ClassRule
-  // public static ServerRule server = new ServerRule();
+  @ClassRule
+  public static ServerRule server = new ServerRule();
 
+  @Test
+  public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("High Card, Low Card");
+  }
+
+  @Test
+  public void gameIsCreatedTest() {
+    goTo("http://localhost:4567/");
+    submit(".btn");
+    assertThat(pageSource()).contains("Player One Wins!");
+  }
 }
