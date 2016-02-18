@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.*;
 
 public class Deck {
   private static final String[] SUITS = {"Spades", "Clubs", "Diamonds", "Hearts"};
-  private static final String[] VALUES = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+  private static final String[] VALUES = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
 
   private ArrayList<Card> mCards;
 
