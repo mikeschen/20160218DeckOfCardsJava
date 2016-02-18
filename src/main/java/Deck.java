@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.*;
 
 public class Deck {
-  private static final String[] SUITS = {"Spades", "Clubs", "Diamonds", "Hearts"};
+  public static final String[] SUITS = {"Clubs", "Diamonds", "Hearts", "Spades"};
   public static final String[] VALUES = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
 
   private ArrayList<Card> mCards;

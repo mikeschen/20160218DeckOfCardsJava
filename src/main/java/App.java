@@ -25,8 +25,12 @@ get("/success", (request, response) -> {
   Card twoCard = fullDeck.get(1);
   int oneCardValue = Arrays.asList(Deck.VALUES).indexOf(oneCard.getValue());
   int twoCardValue = Arrays.asList(Deck.VALUES).indexOf(twoCard.getValue());
+  int oneCardSuit = Arrays.asList(Deck.SUITS).indexOf(oneCard.getSuit());
+  int twoCardSuit = Arrays.asList(Deck.SUITS).indexOf(twoCard.getSuit());
   String playerOneCard = oneCard.name();
   String playerTwoCard = twoCard.name();
+  model.put("oneCardSuit", oneCardSuit);
+  model.put("twoCardSuit", twoCardSuit);
   model.put("oneCardValue", oneCardValue);
   model.put("twoCardValue", twoCardValue);
   model.put("playerOneCard", playerOneCard);
