@@ -20,9 +20,8 @@ get("/", (request, response) -> {
 get("/success", (request, response) -> {
   HashMap<String, Object> model = new HashMap<String, Object>();
   Deck testDeck = new Deck();
-  ArrayList<Card> fullDeck = testDeck.getCards();
-  Card oneCard = fullDeck.get(0);
-  Card twoCard = fullDeck.get(1);
+  Card oneCard = testDeck.getCards().get(0);
+  Card twoCard = testDeck.getCards().get(1);
   int oneCardValue = Arrays.asList(Deck.VALUES).indexOf(oneCard.getValue());
   int twoCardValue = Arrays.asList(Deck.VALUES).indexOf(twoCard.getValue());
   int oneCardSuit = Arrays.asList(Deck.SUITS).indexOf(oneCard.getSuit());
